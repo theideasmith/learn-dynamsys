@@ -21,22 +21,9 @@ def Lorenz(state,t):
 
 from numpy import *
 from matplotlib.pyplot import *
-state0 = [2.0, 3.0, 4.0]
-t = arange(0.0, 30.0, 0.01)
-
-state = odeint(Lorenz, state0, t)
-
-# do some fancy 3D plotting
 from mpl_toolkits.mplot3d import Axes3D
-fig = figure()
-ax = fig.gca(projection='3d')
-ax.plot(state[:,0],state[:,1],state[:,2])
-ax.set_xlabel('x')
-ax.set_ylabel('y')
-ax.set_zlabel('z')
-show()
 
-range(0.0, 30, 0.01)
+t = arange(0.0, 30, 0.01)
 
 # original initial conditions
 state1_0 = [2.0, 3.0, 4.0]
@@ -57,11 +44,12 @@ pp, = plot(state1[10,0],state1[10,1],'b.',markersize=10)
 p2, = plot(state2[0:10,0],state2[0:10,1],'r-')
 pp2, = plot(state2[10,0],state2[10,1],'r.',markersize=10)
 tt = title("%4.2f sec" % 0.00)
+
 # animate
 step = 3
 for i in xrange(1,shape(state1)[0]-10,step):
   p.set_xdata(state1[10+i:20+i,0])
-  p.set_ydata(state1[10+i:20+i,1])
+  p.set_ydata(state1[10+i:20+i,i])
   pp.set_xdata(state1[19+i,0])
   pp.set_ydata(state1[19+i,1])
   p2.set_xdata(state2[10+i:20+i,0])
