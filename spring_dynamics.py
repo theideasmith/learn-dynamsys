@@ -44,3 +44,38 @@ ylabel('STATES')
 title('Mass-Spring System')
 legend(('$x$ (m)', '$\dot{x}$ (m/sec)', '$\ddot{x}$ (m/sec^2)'))
 savefig('spring.jpg')
+
+figure()
+plot(state[:,0], state[:,1], alpha = 0.2)
+
+p, = plot(state[0:10,0], state[0:10,1], 'b-')
+pp, = plot(state[10,0], state[10,1],'b.', markersize=10)
+xlabel('Length ($x$ m)')
+ylabel('Velocity ($\dot{x}$ m/sec)')
+title('Phase Plot: Mass-Spring System $(x,\dot{x})$, 100 steps')
+
+step=2
+show(block=False)
+ion()
+import time
+print type(state)
+
+i = 0
+end = numpy.shape(state)[0]-10
+step = 2
+iterations = 10
+
+while iterations>0: 
+    
+    p.set_xdata(state[i:10+i, 0])
+    p.set_ydata(state[i:10+i, 1])
+    pp.set_xdata(state[9+i,0])
+    pp.set_ydata(state[9+i,1])
+    pause(0.001)
+
+    draw()
+
+    i+=step
+    if (i==end):
+        iterations-=1
+        i=0
