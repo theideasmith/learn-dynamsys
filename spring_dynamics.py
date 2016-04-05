@@ -52,8 +52,7 @@ p, = plot(state[0:10,0], state[0:10,1], 'b-')
 pp, = plot(state[10,0], state[10,1],'b.', markersize=10)
 xlabel('Length ($x$ m)')
 ylabel('Velocity ($\dot{x}$ m/sec)')
-title('Phase Plot: Mass-Spring System $(x,\dot{x})$, 100 steps')
-
+title('Phase Plot: Mass-Spring System $(x,\dot{x})$, 100 steps, $\ddot{x}=\\frac{-kx}{m}+g$')
 step=2
 show(block=False)
 ion()
