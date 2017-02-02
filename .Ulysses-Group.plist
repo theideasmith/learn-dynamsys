@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>createMarkedFile</key>
+	<false/>
+	<key>sheetClusters</key>
+	<array>
+		<array>
+			<string>DynamicalSystemsI.md</string>
+		</array>
+		<array>
+			<string>Hopfield.py</string>
+		</array>
+		<array>
+			<string>lorentz.py</string>
+		</array>
+		<array>
+			<string>lorentz_perturbed.py</string>
+		</array>
+		<array>
+			<string>predator.py</string>
+		</array>
+		<array>
+			<string>README.md</string>
+		</array>
+		<array>
+			<string>spring_dynamics.py</string>
+		</array>
+	</array>
+</dict>
+</plist>
